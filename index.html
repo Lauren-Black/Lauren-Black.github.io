@@ -22,7 +22,7 @@
     </div>
 
     <div id="video">
-        <video class="video" autoplay playsinline muted loop preload poster="../Lauren-Black.github.io/data/data/arduino_temp.mp4">
+        <video class="video" autoplay playsinline muted loop preload poster="../Lauren-Black.github.io/data/data/arduino_temp.mp4" style=visibility: hidden>
             <source src="../Lauren-Black.github.io/data/data/arduino_temp.mp4">
         </video>
     </div>
@@ -147,6 +147,7 @@
         var arWorldRoot = smoothedRoot
 
         var video = document.getElementById('video');
+        video.style.visibility = "visible";
 
         var texture = new THREE.VideoTexture(video);
         texture.minFilter = THREE.LinearFilter;
