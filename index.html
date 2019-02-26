@@ -18,6 +18,13 @@
         <a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - three.js mobile performance
         <br />
         Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
+
+    </div>
+
+    <div id="video">
+        <video class="video" autoplay playsinline muted loop preload poster="../Lauren-Black.github.io/data/data/arduino_temp.mp4">
+            <source src="../Lauren-Black.github.io/data/data/arduino_temp.mp4">
+        </video>
     </div>
     <script>
         //////////////////////////////////////////////////////////////////////////////////
@@ -136,28 +143,38 @@
         //		add an object in the scene
         //////////////////////////////////////////////////////////////////////////////////
 
+
         var arWorldRoot = smoothedRoot
 
+        var video = document.getElementById('video');
+
+        var texture = new THREE.VideoTexture(video);
+        texture.minFilter = THREE.LinearFilter;
+        texture.magFilter = THREE.LinearFilter;
+        texture.format = THREE.RGBFormat;
+        arWorldRoot.add(texture);
+
+
         // add a torus knot	
-        var geometry = new THREE.CubeGeometry(1, 1, 1);
-        var material = new THREE.MeshNormalMaterial({
-            transparent: true,
-            opacity: 0.5,
-            side: THREE.DoubleSide
-        });
-        var mesh = new THREE.Mesh(geometry, material);
-        mesh.position.y = geometry.parameters.height / 2
-        arWorldRoot.add(mesh);
-
-        var geometry = new THREE.TorusKnotGeometry(0.3, 0.1, 64, 16);
-        var material = new THREE.MeshNormalMaterial();
-        var mesh = new THREE.Mesh(geometry, material);
-        mesh.position.y = 0.5
-        arWorldRoot.add(mesh);
-
-        onRenderFcts.push(function() {
-            mesh.rotation.x += 0.1
-        })
+//        var geometry = new THREE.CubeGeometry(1, 1, 1);
+// var material = new THREE.MeshNormalMaterial({
+// transparent: true,
+// opacity: 0.5,
+// side: THREE.DoubleSide
+// });
+// var mesh = new THREE.Mesh(geometry, material);
+// mesh.position.y = geometry.parameters.height / 2
+// arWorldRoot.add(mesh);
+//
+// var geometry = new THREE.TorusKnotGeometry(0.3, 0.1, 64, 16);
+// var material = new THREE.MeshNormalMaterial();
+// var mesh = new THREE.Mesh(geometry, material);
+// mesh.position.y = 0.5
+// arWorldRoot.add(mesh);
+//
+// onRenderFcts.push(function() {
+// mesh.rotation.x += 0.1
+// })
 
         //////////////////////////////////////////////////////////////////////////////////
         //		render the whole thing on the page
