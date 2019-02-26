@@ -114,13 +114,12 @@
         //          Create a ArMarkerControls
         ////////////////////////////////////////////////////////////////////////////////
 
-        var markerRoot = new THREE.Group
-        scene.add(markerRoot)
+        var markerRoot = new THREE.Group;
+        scene.add(markerRoot);
         var artoolkitMarker = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
             type: 'pattern',
-            patternUrl: THREEx.ArToolkitContext.baseURL + 'data/money-pattern.patt'
-            // patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.kanji'
-        })
+            patternUrl: THREEx.ArToolkitContext.baseURL + 'data/money-pattern.patt',
+        });
 
         // build a smoothedControls
         var smoothedRoot = new THREE.Group()
