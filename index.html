@@ -165,10 +165,10 @@
         
         var geometry = new THREE.CubeGeometry(1, 1, 1);
         var material = new THREE.MeshPhongMaterial({
-            transparent: false,
-            opacity: 1,
+            transparent: true,
+            opacity: 0.5,
             side: THREE.DoubleSide,
-            map: THREE.ImageUtils.loadTexture('../data/data/render1.png')
+            //map: THREE.ImageUtils.loadTexture('../data/data/render1.png')
         });
         var mesh = new THREE.Mesh(geometry, material);
 //        mesh.position.y = geometry.parameters.height / 2
