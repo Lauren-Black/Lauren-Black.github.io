@@ -158,13 +158,15 @@
         var textureLoader = new THREE.TextureLoader();
         cubeTexture = new textureLoader.load("../data/data/arduino_temp.mp4");
         
-        box = new THREE.mesh(
+        cube = new THREE.mesh(
             new THREE.BoxGeometry(3,3,3),
             new THREE.MeshPhongMaterial({
                 color:0xffffff,
                 map:cubeTexture
             })
         );
+        
+        arWorldRoot.add(cube); 
             
         
         
