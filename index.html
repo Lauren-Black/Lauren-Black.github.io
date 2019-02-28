@@ -190,10 +190,9 @@
 //        var mesh = new THREE.Mesh(geometry, material);
 //         mesh.position.y = 0.5
         
-        function addObjects(){
-            console.log("running");
+        
             arWorldRoot.add(geometry);  
-        }
+        
         
         
         //////////////////////////////////////////////////////////////////////////////////
@@ -204,7 +203,6 @@
         // render the scene
         onRenderFcts.push(function() {
             renderer.render(scene, camera);
-            //addObjects();
             stats.update();
         })
 
