@@ -164,13 +164,13 @@
 //        cube = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color:  0xff0000 } ) );
 //        
 //        arWorldRoot.add(cube); 
-        console.log("phong")
+        console.log("texload")
         var geometry = new THREE.CubeGeometry(1, 1, 1);
         var material = new THREE.MeshPhongMaterial({
             transparent: false,
             opacity: 0.5,
             color:0xff0000,
-            map: texture
+            map: THREE.TextureLoader.load("../data/data/logo.jpg")
         });
         material.side = THREE.DoubleSide;
         var mesh = new THREE.Mesh(geometry, material);
