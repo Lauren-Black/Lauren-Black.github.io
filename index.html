@@ -163,12 +163,12 @@
 //        
 //        arWorldRoot.add(cube); 
         
-        var geometry = new THREE.CubeGeometry(1, 1, 1);
+        var geometry = new THREE.CubeGeometry(10, 10, 10);
         var material = new THREE.MeshPhongMaterial({
             transparent: false,
             opacity: 0.6,
             side: THREE.DoubleSide,
-            map: THREE.ImageUtils.loadTexture('../data/data/render1.png')
+            map: THREE.ImageUtils.loadTexture('../data/data/logo.jpg')
         });
         var mesh = new THREE.Mesh(geometry, material);
 //        mesh.position.y = geometry.parameters.height / 2
