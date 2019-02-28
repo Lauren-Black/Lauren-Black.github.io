@@ -155,8 +155,8 @@
        
         // video texture
         
-        var textureLoader = new THREE.TextureLoader();
-        cubeTexture = new textureLoader.load("../data/data/render1.png");
+        //var textureLoader = new THREE.TextureLoader();
+        //cubeTexture = new textureLoader.load("../data/data/render1.png");
         
 //        var geometry = new THREE.BoxGeometry( 20, 20, 20 );
 //        cube = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color:  0xff0000 } ) );
@@ -167,8 +167,8 @@
         var material = new THREE.MeshNormalMaterial({
             //transparent: true,
             opacity: 1,
-            //side: THREE.DoubleSide,
-            map: cubeTexture
+            side: THREE.DoubleSide,
+            map: THREE.ImageUtils.loadTexture('../data/data/render1.png')
         });
         var mesh = new THREE.Mesh(geometry, material);
         mesh.position.y = geometry.parameters.height / 2
