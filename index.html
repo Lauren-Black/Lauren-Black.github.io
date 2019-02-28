@@ -156,43 +156,20 @@
         texture.format = THREE.RGBFormat;
 
 
-        // add a torus knot	
-        //        var geometry = new THREE.CubeGeometry(1, 1, 1);
-        // var material = new THREE.MeshNormalMaterial({
-        // transparent: true,
-        // opacity: 0.5,
-        // side: THREE.DoubleSide
-        // });
-        // var mesh = new THREE.Mesh(geometry, material);
-        // mesh.position.y = geometry.parameters.height / 2
-        // arWorldRoot.add(mesh);
-        //
-        // var geometry = new THREE.TorusKnotGeometry(0.3, 0.1, 64, 16);
-        // var material = new THREE.MeshNormalMaterial();
-        // var mesh = new THREE.Mesh(geometry, material);
-        // mesh.position.y = 0.5
-        // arWorldRoot.add(mesh);
-        //
-        // onRenderFcts.push(function() {
-        // mesh.rotation.x += 0.1
-        // })
-
+       
         // video texture
         
-        var geometry = new THREE.PlaneGeometry(1,1,1);
+        var textureLoader = new THREE.TextureLoader();
+        cubeTexture = new textureLoader.load(video);
         
-        var video =  document.getElementById('video');
-        
-        var texture = new THREE.VideoTexture( video );
-        
-        var parameters = {color:0xffffff, map:texture};
-        
-//        var material = new THREE.MeshLambertMaterial( parameters );
-//        var mesh = new THREE.Mesh(geometry, material);
-//         mesh.position.y = 0.5
-        
-        
-            arWorldRoot.add(geometry);  
+        box = new THREE.mesh(
+            new THREE.BoxGeometry(3,3,3),
+            new THREE.MeshPhongMaterial({
+                color:0xffffff,
+                map:cubeTexture
+            })
+        );
+            
         
         
         
