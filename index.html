@@ -164,11 +164,12 @@
 //        cube = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color:  0xff0000 } ) );
 //        
 //        arWorldRoot.add(cube); 
-        console.log("why isnt jacob resonding????")
+        console.log("updated")
         var geometry = new THREE.CubeGeometry(1, 1, 1);
         var material = new THREE.MeshNormalMaterial({
             transparent: false,
             opacity: 0.5,
+            color:0xff0000,
             map: texture
         });
         material.side = THREE.DoubleSide;
