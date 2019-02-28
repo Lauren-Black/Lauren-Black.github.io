@@ -158,7 +158,8 @@
         var textureLoader = new THREE.TextureLoader();
         cubeTexture = new textureLoader.load("../data/data/arduino_temp.mp4");
         
-        var cube = new THREE.BoxGeometry( 20, 20, 20 );
+        var geometry = new THREE.BoxGeometry( 20, 20, 20 );
+        cube = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color:  0xff0000 } ) );
         
         arWorldRoot.add(cube); 
             
