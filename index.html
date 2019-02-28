@@ -22,9 +22,7 @@
     </div>
 
     <div>
-        <video id="video">
-            <source src="../Lauren-Black.github.io/data/data/arduino_temp.mp4">
-        </video>
+        
     </div>
    
     <script>
@@ -147,20 +145,20 @@
         
         var arWorldRoot = smoothedRoot
 
-        var video = document.getElementById('video');
-        video.style.visibility = "visible";
+        //var video = document.getElementById('video');
+        //video.style.visibility = "visible";
 
-        var texture = new THREE.VideoTexture(video);
-        texture.minFilter = THREE.LinearFilter;
-        texture.magFilter = THREE.LinearFilter;
-        texture.format = THREE.RGBFormat;
+//        var texture = new THREE.VideoTexture(video);
+//        texture.minFilter = THREE.LinearFilter;
+//        texture.magFilter = THREE.LinearFilter;
+//        texture.format = THREE.RGBFormat;
 
 
        
         // video texture
         
         var textureLoader = new THREE.TextureLoader();
-        cubeTexture = new textureLoader.load(video);
+        cubeTexture = new textureLoader.load("../data/data/arduino_temp.mp4");
         
         box = new THREE.mesh(
             new THREE.BoxGeometry(3,3,3),
