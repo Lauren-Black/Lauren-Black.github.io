@@ -166,9 +166,9 @@
 //        arWorldRoot.add(cube); 
         console.log("HELP me")
         var geometry = new THREE.CubeGeometry(1, 1, 1);
-        var material = new THREE.MeshPhongMaterial({
-            transparent: false,
-            opacity: 1,
+        var material = new THREE.MeshNormalMaterial({
+            transparent: true,
+            opacity: 0.5,
             //map: texture
         });
         material.side = THREE.DoubleSide;
