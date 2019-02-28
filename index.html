@@ -155,10 +155,10 @@
        
         // video texture
         
-        var textureLoader = new THREE.TextureLoader();
-        texture = new textureLoader.load("../data/data/logo.jpg");
-        texture.wrapS = THREE.RepeatWrapping;
-        texture.wrapT = THREE.RepeatWrapping;
+        //var textureLoader = new THREE.TextureLoader();
+        //texture = new textureLoader.load("../data/data/logo.jpg");
+        //texture.wrapS = THREE.RepeatWrapping;
+        //texture.wrapT = THREE.RepeatWrapping;
         
 //        var geometry = new THREE.BoxGeometry( 20, 20, 20 );
 //        cube = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color:  0xff0000 } ) );
@@ -169,7 +169,7 @@
         var material = new THREE.MeshPhongMaterial({
             transparent: false,
             opacity: 1,
-            map: texture
+            //map: texture
         });
         material.side = THREE.DoubleSide;
         var mesh = new THREE.Mesh(geometry, material);
