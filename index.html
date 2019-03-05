@@ -8,7 +8,7 @@
 <!-- ar.js -->
 <script src="https://jeromeetienne.github.io/AR.js/three.js/build/ar.js"></script>
 <script>
-            THREEx.ArToolkitContext.baseURL = '../'
+    THREEx.ArToolkitContext.baseURL = '../'
 
 </script>
 
@@ -19,10 +19,10 @@
         <br />
         Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
 
-   
-        
+
+
     </div>
-   
+
     <script>
         //////////////////////////////////////////////////////////////////////////////////
         //		Init
@@ -140,36 +140,36 @@
         //		add an object in the scene
         //////////////////////////////////////////////////////////////////////////////////
 
-        
+
         var arWorldRoot = smoothedRoot
 
         //var video = document.getElementById('video');
         //video.style.visibility = "visible";
 
-//        var texture = new THREE.VideoTexture(video);
-//        texture.minFilter = THREE.LinearFilter;
-//        texture.magFilter = THREE.LinearFilter;
-//        texture.format = THREE.RGBFormat;
+        //        var texture = new THREE.VideoTexture(video);
+        //        texture.minFilter = THREE.LinearFilter;
+        //        texture.magFilter = THREE.LinearFilter;
+        //        texture.format = THREE.RGBFormat;
 
 
-       
+
         // video texture
-        
+
         var textureLoader = new THREE.TextureLoader();
         //texture = new textureLoader.load("../data/data/logo.jpg");
         //texture.wrapS = THREE.RepeatWrapping;
         //texture.wrapT = THREE.RepeatWrapping;
-        
-//        var geometry = new THREE.BoxGeometry( 20, 20, 20 );
-//        cube = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color:  0xff0000 } ) );
-//        
-//        arWorldRoot.add(cube); 
+
+        //        var geometry = new THREE.BoxGeometry( 20, 20, 20 );
+        //        cube = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color:  0xff0000 } ) );
+        //        
+        //        arWorldRoot.add(cube); 
         console.log("not a freaking constructor");
         var geometry = new THREE.CubeGeometry(1, 1, 1);
-        var material = new THREE.MeshPhongMaterial({
+        var material = new THREE.MeshNormalMaterial({
             transparent: false,
             opacity: 0.5,
-            color:0xff0000,
+            color: 0xff0000,
             map: textureLoader.load("../data/data/logo.jpg")
         });
         material.side = THREE.DoubleSide;
@@ -182,12 +182,12 @@
         //mesh.position.y = 0.5
         //arWorldRoot.add(mesh);
         //onRenderFcts.push(function() {
-            //mesh.rotation.x += 0.1
+        //mesh.rotation.x += 0.1
         //})
-            
-        
-        
-        
+
+
+
+
         //////////////////////////////////////////////////////////////////////////////////
         //		render the whole thing on the page
         //////////////////////////////////////////////////////////////////////////////////
@@ -211,7 +211,7 @@
             // call each update function
             onRenderFcts.forEach(function(onRenderFct) {
                 onRenderFct(deltaMsec / 1000, nowMsec / 1000)
-                
+
             })
         })
 
