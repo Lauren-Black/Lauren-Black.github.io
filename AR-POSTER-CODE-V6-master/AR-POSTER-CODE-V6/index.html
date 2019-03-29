@@ -155,7 +155,8 @@
         ///// Movie image will be scaled to fit this size:
         var movieGeometry = new THREE.PlaneGeometry(4.48, 4.48);
         var movieScreen = new THREE.Mesh(movieGeometry, movieMaterial);
-        //movieScreen.rotation.x = Math.PI / 2;
+        movieScreen.rotation.x = Math.PI / 2;
+        movieScreen.rotation.y = Math.PI / 2;
 
 
         ///// Sprite Maps, map your images here:
