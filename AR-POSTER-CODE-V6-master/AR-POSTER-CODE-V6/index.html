@@ -122,13 +122,13 @@
         var pc = 0;
 
         ///// Audio variables, sawp in your audio files here:
-        var audio1 = new Audio('audio/audio1.mp3');
+        //var audio1 = new Audio('audio/voice.mp3');
         var audio2 = new Audio('audio/audio2.mp3');
         var audio3 = new Audio('audio/audio3.mp3');
 
         ///// Create a video element.
         video = document.createElement('video');
-        video.src = "UBI.mp4";
+        video.src = "vid-w-sound.mp4";
         video.load();
 
 
@@ -323,11 +323,11 @@
 
             ///// Audio player logic, for mobile you require an interaction (button click) in order for sound to initialize.
             //if (markerRoot.visible === true) {
-            //    audio1.play();
-            //}
+            //audio1.play();
+            // }
             //if (markerRoot.visible === false) {
-            //    audio1.pause();
-            //}
+            // audio1.pause();
+            // }
 
             if (markerRoot.visible === false) {
                 video.pause();
