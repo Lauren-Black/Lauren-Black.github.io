@@ -134,8 +134,8 @@
 
         videoImage = document.createElement('canvas');
         ///// When you change the video source, check it's resolution and change these values:
-        videoImage.width = 728;
-        videoImage.height = 2028;
+        videoImage.width = 1728;
+        videoImage.height = 1728;
 
         videoImageContext = videoImage.getContext('2d');
         ///// Background color if no video present.
@@ -153,7 +153,7 @@
         });
         ///// The geometry on which the movie will be displayed.
         ///// Movie image will be scaled to fit this size:
-        var movieGeometry = new THREE.PlaneGeometry(4.48, 2.52);
+        var movieGeometry = new THREE.PlaneGeometry(4.48, 4.48);
         var movieScreen = new THREE.Mesh(movieGeometry, movieMaterial);
         movieScreen.rotation.x = Math.PI / 2;
 
