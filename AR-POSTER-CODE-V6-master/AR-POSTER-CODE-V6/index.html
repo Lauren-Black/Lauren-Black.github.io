@@ -128,7 +128,7 @@
 
         ///// Create a video element.
         video = document.createElement('video');
-        video.src = "arduino_temp.mp4";
+        video.src = "UBI.mp4";
         video.load();
 
 
@@ -153,7 +153,7 @@
         });
         ///// The geometry on which the movie will be displayed.
         ///// Movie image will be scaled to fit this size:
-        var movieGeometry = new THREE.PlaneGeometry(4.48, 2.52);
+        var movieGeometry = new THREE.PlaneGeometry(5, 2.52);
         var movieScreen = new THREE.Mesh(movieGeometry, movieMaterial);
         movieScreen.rotation.x = Math.PI / 2;
 
@@ -296,8 +296,8 @@
             });
 
             ///// Assign sprites/elements to markers here.
-            markerRoot.add(sprite);
-            markerRoot2.add(movieScreen);
+            markerRoot.add(movieScreen);
+            markerRoot2.add(sprite);
             markerRoot3.add(sprite3);
 
             onRenderFcts.push(function() {});
