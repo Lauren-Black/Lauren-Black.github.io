@@ -161,7 +161,7 @@
 
 
         ///// Sprite Maps, map your images here:
-        var spriteMap = new THREE.TextureLoader().load("img/family.jpg");
+        var spriteMap = new THREE.TextureLoader().load("img/sprite.png");
         var spriteMaterial = new THREE.SpriteMaterial({
             map: spriteMap,
             color: 0xffffff
@@ -279,7 +279,7 @@
             scene.add(markerRoot)
             artoolkitMarker = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
                 type: 'pattern',
-                patternUrl: 'data/family.patt'
+                patternUrl: 'data/family-white.patt'
             });
 
             markerRoot2 = new THREE.Group
