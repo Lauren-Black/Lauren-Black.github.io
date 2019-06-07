@@ -6,11 +6,21 @@
 <body style='margin : 0px; overflow: hidden;'>
 
     <a-scene embedded arjs>
+
         <!-- create your content here. just a box for now -->
         <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
         <!-- define a camera which will move according to the marker position -->
-        <a-marker-camera preset='hiro'></a-marker-camera>
 
+        <a-marker-camera preset='hiro'></a-marker-camera>
+        <a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible=""></a-entity>
+        <a-entity light="" position="" data-aframe-default-light="" aframe-injected="" rotation="" scale="" visible=""></a-entity>
     </a-scene>
+
+    <div class="a-enter-vr" aframe-injected>
+        <button class="a-enter-vr-button" title="Enter VR mode with a headset or fullscreen mode on a desktop. Visit https://webvr.rocks or https://webvr.info for more information." aframe-injected></button>
+    </div>
+    <div class="a-orientation-modal a-hidden" aframe-injected>
+        <button aframe-injected>Exit VR</button>
+    </div>
 
 </body>
